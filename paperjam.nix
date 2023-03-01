@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://mj.ucw.cz/download/linux/${pname}-${version}.tar.gz";
-    sha256 = "sha256:d00ce24fb44e2024c43ca680e146f507c36d21f2e6c515eb896edca11c43a50d";
+    sha256 = "sha256-0AziT7ROICTEPKaA4Ub1B8NtIfLmxRXriW7coRxDpQ0";
   };
 
   installFlags = [ "PREFIX=$(out)" ];
