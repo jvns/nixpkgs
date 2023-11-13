@@ -56,6 +56,7 @@
         nb
         ncdu
         neovim
+        ngrok
         ninja
         nmap
         nodejs
@@ -94,7 +95,6 @@
         hugoFlake.defaultPackage.aarch64-darwin
         paperjamFlake.defaultPackage.aarch64-darwin
 #       zulu     # maybe easier to manage this outside of nix??
-#       ngrok    # nonfree??
 #       prettier # ??? just installed with npm idk
         ];
         pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];
