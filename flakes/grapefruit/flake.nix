@@ -71,7 +71,6 @@
         pv
         py-spy
         pyright
-        python3.10
         python310Packages.black
         python310Packages.httpie
         qpdf
