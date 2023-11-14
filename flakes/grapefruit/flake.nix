@@ -1,7 +1,7 @@
 {
   description = "julia's dev env";
   inputs = {
-      nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2305.491812.tar.gz";
+      nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.05-darwin";
       hugoFlake.url = "path:../hugo-0.40";
       paperjamFlake.url = "path:../paperjam";
   };
