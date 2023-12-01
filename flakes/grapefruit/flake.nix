@@ -1,7 +1,7 @@
 {
   description = "julia's dev env";
   inputs = {
-      nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.05-darwin";
+      nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
       hugoFlake.url = "path:../hugo-0.40";
       paperjamFlake.url = "path:../paperjam";
   };
@@ -24,7 +24,8 @@
         deno
         difftastic
         direnv
-        exa
+        entr
+        eza
         fd
         ffmpeg
         findutils
@@ -59,9 +60,11 @@
         ngrok
         ninja
         nmap
+        #nodejs-16_x
         nodejs
         nushell
-        oil
+        # oil (build failure)
+        osxfuse
         pandoc
         pdf2svg
         pdftk
@@ -69,7 +72,7 @@
         poppler_utils
         pstree
         pv
-        py-spy
+        # py-spy (build failure)  
         pyright
         python310Packages.black
         python310Packages.httpie
@@ -96,7 +99,7 @@
 #       zulu     # maybe easier to manage this outside of nix??
 #       prettier # ??? just installed with npm idk
         ];
-        pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" ];
+        pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" "include"];
         extraOutputsToInstall = [ "man" "doc" ];
       };
     };
