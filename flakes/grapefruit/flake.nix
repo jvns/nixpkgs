@@ -35,6 +35,7 @@
         ghostscript
         gnuplot
         go_1_19
+        got
         graphviz
         helix
         htop
