@@ -30,6 +30,7 @@
         ffmpeg
         findutils
         fish
+        trippy
         fzf
         gawk
         ghostscript
