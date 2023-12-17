@@ -3,7 +3,6 @@ let bixi = pkgs.callPackage pkgs.stdenv.mkDerivation {
   name = "bixi-cache";
   src = fetchGit {
     url = "git@github.com:jvns/biximap2.git";
-    rev = "8bd96bd77f3b671323c98df1d27422900f3a8cc6";
   };
   buildInputs = [ pkgs.go ];
   GOCACHE = "/tmp/go-cache"; /* todo: this is probably wrong */
@@ -22,6 +21,9 @@ let bixi = pkgs.callPackage pkgs.stdenv.mkDerivation {
     gid = 1004;
   };
 
+  services.caddy.virtualHosts."bixi.jvns.ca".extraConfig = ''
+    reverse_proxy localhost:8999
+  '';
 
   systemd.services.bixi-cache = {
     enable = true;
