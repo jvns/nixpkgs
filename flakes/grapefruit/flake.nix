@@ -32,6 +32,7 @@
         fish
         trippy
         fzf
+        nixos-rebuild
         gawk
         ghostscript
         gnuplot
