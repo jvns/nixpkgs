@@ -4,7 +4,7 @@
   networking = {
     nameservers = [ "8.8.8.8"
  ];
-    defaultGateway = "172.31.1.1";
+    defaultGateway = "172.31.1.1"; # hetzner gateway
     defaultGateway6 = {
       address = "fe80::1";
       interface = "eth0";
