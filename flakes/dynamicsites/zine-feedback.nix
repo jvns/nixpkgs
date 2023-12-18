@@ -20,7 +20,7 @@ let feedback = pkgs.callPackage pkgs.buildGoModule {
     gid = 1005;
   };
 
-  services.caddy.virtualHosts."feedback.jvns.ca".extraConfig = ''
+  services.caddy.virtualHosts."feedback.wizardzines.com".extraConfig = ''
     reverse_proxy localhost:8333
   '';
   systemd.tmpfiles.rules = [
