@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ./networking.nix # generated at runtime by nixos-infect
     ./bixi.nix
-    
+    ./zine-feedback.nix
   ];
 
   boot.cleanTmpDir = true;
