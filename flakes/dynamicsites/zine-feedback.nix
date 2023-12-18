@@ -23,10 +23,8 @@ let feedback = pkgs.callPackage pkgs.buildGoModule {
   services.caddy.virtualHosts."feedback.jvns.ca".extraConfig = ''
     reverse_proxy localhost:8333
   '';
-  /* create /data/zine-feedback directory */
-
   systemd.tmpfiles.rules = [
-    /* - at the end meand don't clean up on reboot */
+    # the - at the end means don't clean up on reboot
     "d /data/zine-feedback 0755 feedback feedback -"
   ];
 
