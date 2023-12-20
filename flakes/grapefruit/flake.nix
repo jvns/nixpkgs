@@ -33,6 +33,8 @@
         trippy
         fzf
         gawk
+        tmux
+        scdoc
         ghostscript
         gnuplot
         go_1_19
