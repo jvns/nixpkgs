@@ -30,9 +30,8 @@
         ffmpeg
         findutils
         fish
-        trippy
+        fish
         fzf
-        nixos-rebuild
         gawk
         ghostscript
         gnuplot
@@ -41,6 +40,7 @@
         graphviz
         helix
         htop
+        hugoFlake.defaultPackage.aarch64-darwin
         imagemagick
         jq
         just
@@ -62,20 +62,19 @@
         neovim
         ngrok
         ninja
+        nixos-rebuild
         nmap
-        #nodejs-16_x
         nodejs
         nushell
-        # oil (build failure)
         osxfuse
         pandoc
+        paperjamFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
         pngquant
         poppler_utils
         pstree
         pv
-        # py-spy (build failure)  
         pyright
         python310Packages.black
         python310Packages.httpie
@@ -85,22 +84,25 @@
         rlwrap
         ruby
         s3cmd
+        scdoc
         sd
         shellcheck
         texlive.combined.scheme-basic
         tig
         tldr
-        fish
+        tmux
         toml2json
         tree
+        trippy
         visidata
         viu
         wget
         wormhole-william
-        hugoFlake.defaultPackage.aarch64-darwin
-        paperjamFlake.defaultPackage.aarch64-darwin
-#       zulu     # maybe easier to manage this outside of nix??
+        # oil (build failure)
+        # py-spy (build failure)  
+        #nodejs-16_x
 #       prettier # ??? just installed with npm idk
+#       zulu     # maybe easier to manage this outside of nix??
         ];
         pathsToLink = [ "/share/man" "/share/doc" "/bin" "/lib" "include"];
         extraOutputsToInstall = [ "man" "doc" ];
