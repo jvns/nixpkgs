@@ -4,8 +4,9 @@
       nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
       hugoFlake.url = "path:../hugo-0.40";
       paperjamFlake.url = "path:../paperjam";
+      picatFlake.url = "path:../picat";
   };
-  outputs = { self, nixpkgs, hugoFlake, paperjamFlake }: {
+  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake }: {
     defaultPackage.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.buildEnv {
       name = "julia-dev";
       paths = with nixpkgs.legacyPackages.aarch64-darwin; [
@@ -35,7 +36,7 @@
         gawk
         ghostscript
         gnuplot
-        go_1_19
+        go_1_20
         got
         graphviz
         helix
@@ -49,8 +50,9 @@
         lftp
         librsvg
         libyaml
-        lima
+        #lima
         lsd
+        glpk
         lua
         lychee # link checker
         meld
@@ -69,6 +71,7 @@
         osxfuse
         pandoc
         paperjamFlake.defaultPackage.aarch64-darwin
+        picatFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
         pngquant
