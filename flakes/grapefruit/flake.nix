@@ -2,12 +2,13 @@
   description = "julia's dev env";
   inputs = {
       nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+      nixpkgsUnstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
       hugoFlake.url = "path:../hugo-0.40";
       paperjamFlake.url = "path:../paperjam";
       jjFlake.url = "path:../jj";
       picatFlake.url = "path:../picat";
   };
-  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, jjFlake }: {
+  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, jjFlake, nixpkgsUnstable }: {
     defaultPackage.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.buildEnv {
       name = "julia-dev";
       paths = with nixpkgs.legacyPackages.aarch64-darwin; [
@@ -44,9 +45,10 @@
         helix
         htop
         hugoFlake.defaultPackage.aarch64-darwin
-        jjFlake.defaultPackage.aarch64-darwin
         imagemagick
         jq
+        # install jj from unstable
+        nixpkgsUnstable.legacyPackages.aarch64-darwin.jujutsu
         just
         keystone
         lazygit
@@ -75,7 +77,6 @@
         osxfuse
         pandoc
         paperjamFlake.defaultPackage.aarch64-darwin
-        jjFlake.defaultPackage.aarch64-darwin
         picatFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
