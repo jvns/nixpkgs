@@ -5,10 +5,9 @@
       nixpkgsUnstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
       hugoFlake.url = "path:../hugo-0.40";
       paperjamFlake.url = "path:../paperjam";
-      jjFlake.url = "path:../jj";
       picatFlake.url = "path:../picat";
   };
-  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, jjFlake, nixpkgsUnstable }: {
+  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, nixpkgsUnstable }: {
     defaultPackage.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.buildEnv {
       name = "julia-dev";
       paths = with nixpkgs.legacyPackages.aarch64-darwin; [
