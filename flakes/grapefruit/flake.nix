@@ -82,7 +82,7 @@
         pandoc
         paperjamFlake.defaultPackage.aarch64-darwin
         picatFlake.defaultPackage.aarch64-darwin
-        powerdnsFlake.defaultPackage.aarch64-darwin
+        #powerdnsFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
         pngquant

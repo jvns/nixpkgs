@@ -147,7 +147,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-zlrw/NIaQ7jFn+YkbodNg2GwCcvUVYUaSzaKwSmkC50=",
+        "narHash": "sha256-6o8gxwrA1IbJKjLzxutoNO0/TLv8SwrRmwO2dES1T/E=",
         "path": "../powerdns",
         "type": "path"
       },

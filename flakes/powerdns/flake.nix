@@ -30,17 +30,20 @@
       configureFlags = [
         "--with-sqlite3"
         ];
-      # nix destroy with-modules arguments, when using configureFlags
+      NIX_LDFLAGS = "-v";
+
       preConfigure = ''
         export PKG_CONFIG_PATH=${luajit}/lib/pkgconfig:${lua}/lib/pkgconfig
-        echo $PKG_CONFIG_PATH
         configureFlagsArray+=(
+          "--with-dynmodules="
           "--with-modules=gsqlite3"
         )
       '';
 
 
-      installFlags = [ "sysconfdir=$(out)/etc/pdns" ];
+      enableParallelBuilding = true;
+      doCheck = true;
+
       meta = with nixpkgs.legacyPackages.aarch64-darwin.lib; {
         description = "Authoritative DNS server";
         homepage = "https://www.powerdns.com";
