@@ -95,22 +95,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1708529342,
-        "narHash": "sha256-gTzSstZWvAJgVz5U6coxVtAlY7dldPKgljjR9+cGr/I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-23.11-darwin",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "paperjamFlake": {
       "inputs": {
         "nixpkgs": "nixpkgs_3"
@@ -141,29 +125,13 @@
         "type": "path"
       }
     },
-    "powerdnsFlake": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_5"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-6o8gxwrA1IbJKjLzxutoNO0/TLv8SwrRmwO2dES1T/E=",
-        "path": "../powerdns",
-        "type": "path"
-      },
-      "original": {
-        "path": "../powerdns",
-        "type": "path"
-      }
-    },
     "root": {
       "inputs": {
         "hugoFlake": "hugoFlake",
         "nixpkgs": "nixpkgs_2",
         "nixpkgsUnstable": "nixpkgsUnstable",
         "paperjamFlake": "paperjamFlake",
-        "picatFlake": "picatFlake",
-        "powerdnsFlake": "powerdnsFlake"
+        "picatFlake": "picatFlake"
       }
     }
   },

@@ -9,9 +9,8 @@
       hugoFlake.url = "path:../hugo-0.40";
       paperjamFlake.url = "path:../paperjam";
       picatFlake.url = "path:../picat";
-      powerdnsFlake.url = "path:../powerdns";
   };
-  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, powerdnsFlake, nixpkgsUnstable }: {
+  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, nixpkgsUnstable }: {
     defaultPackage.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.buildEnv {
       name = "julia-dev";
       paths = with nixpkgs.legacyPackages.aarch64-darwin; [
@@ -82,7 +81,6 @@
         pandoc
         paperjamFlake.defaultPackage.aarch64-darwin
         picatFlake.defaultPackage.aarch64-darwin
-        #powerdnsFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
         pngquant
