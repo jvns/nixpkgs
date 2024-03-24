@@ -30,6 +30,10 @@
         myPicat
         myHugo
 
+        unstablePkgs.jujutsu
+        unstablePkgs.ncdu
+        unstablePkgs.oil
+
         alacritty
         atuin
         asdf-vm
@@ -66,8 +70,6 @@
         htop
         imagemagick
         jq
-        # install jj from unstable
-        unstablePkgs.jujutsu
         just
         keystone
         lazygit
@@ -85,7 +87,6 @@
         moreutils
         mtr
         nb
-        unstablePkgs.ncdu
         neovim
         ngrok
         ninja
