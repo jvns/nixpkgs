@@ -1,7 +1,7 @@
 {
   description = "A flake for paperjam with libpaper as a dependency";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/700804df18b73e2fe360d950f371aaec1691dea2";
 
   outputs = { self, nixpkgs }: {
     defaultPackage.aarch64-darwin = with nixpkgs.legacyPackages.aarch64-darwin; stdenv.mkDerivation rec {

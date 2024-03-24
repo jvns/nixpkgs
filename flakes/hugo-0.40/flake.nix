@@ -1,6 +1,6 @@
 {
   description = "A flake for Hugo 0.40.3";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/700804df18b73e2fe360d950f371aaec1691dea2";
   outputs = { self, nixpkgs }: {
     defaultPackage.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.buildGoPackage rec {
           pname = "hugo040";

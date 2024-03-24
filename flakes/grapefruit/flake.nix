@@ -15,6 +15,7 @@
       name = "julia-dev";
       paths = with nixpkgs.legacyPackages.aarch64-darwin; [
         alacritty
+        atuin
         asdf-vm
         bind
         bitwise
@@ -83,6 +84,8 @@
         picatFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
+        acme-client
+        #starship
         pngquant
         poppler_utils
         pstree
