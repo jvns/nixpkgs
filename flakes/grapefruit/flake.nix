@@ -16,9 +16,9 @@
       system = "aarch64-darwin";
       config.allowUnfree = true;
     };
-    myHugo = import ./hugo-0.40.nix { inherit pkgs; };
-    myPaperjam = import ./paperjam.nix { inherit pkgs; };
-    myPicat = import ./picat.nix { inherit pkgs; };
+    myHugo = import ./hugo-0.40.nix { pkgs = pkgs; };
+    myPaperjam = import ./paperjam.nix { pkgs = pkgs; };
+    myPicat = import ./picat.nix { pkgs = pkgs; };
     in 
 {
     defaultPackage.aarch64-darwin = pkgs.buildEnv {
