@@ -33,6 +33,7 @@
         unstablePkgs.jujutsu
         unstablePkgs.ncdu
         unstablePkgs.oil
+        unstablePkgs.nix-output-monitor
 
         alacritty
         atuin
