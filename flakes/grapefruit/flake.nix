@@ -12,6 +12,10 @@
       system = "aarch64-darwin";
       config.allowUnfree = true;
     };
+    unstablePkgs = import nixpkgsUnstable {
+      system = "aarch64-darwin";
+      config.allowUnfree = true;
+    };
     myHugo = import ./hugo-0.40.nix { inherit pkgs; };
     myPaperjam = import ./paperjam.nix { inherit pkgs; };
     myPicat = import ./picat.nix { inherit pkgs; };
@@ -61,7 +65,7 @@
         imagemagick
         jq
         # install jj from unstable
-        nixpkgsUnstable.legacyPackages.aarch64-darwin.jujutsu
+        unstablePkgs.jujutsu
         just
         keystone
         lazygit
@@ -79,7 +83,7 @@
         moreutils
         mtr
         nb
-        nixpkgsUnstable.legacyPackages.aarch64-darwin.ncdu
+        unstablePkgs.ncdu
         neovim
         ngrok
         ninja
