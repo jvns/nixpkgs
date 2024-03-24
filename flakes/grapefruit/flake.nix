@@ -10,10 +10,16 @@
       paperjamFlake.url = "path:../paperjam";
       picatFlake.url = "path:../picat";
   };
-  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, nixpkgsUnstable }: {
-    defaultPackage.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.buildEnv {
+  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, nixpkgsUnstable }: 
+    let pkgs = import nixpkgs {
+      system = "aarch64-darwin";
+      config.allowUnfree = true;
+    };
+    in 
+{
+    defaultPackage.aarch64-darwin = pkgs.buildEnv {
       name = "julia-dev";
-      paths = with nixpkgs.legacyPackages.aarch64-darwin; [
+      paths = with pkgs; [
         alacritty
         atuin
         asdf-vm
@@ -70,9 +76,9 @@
         moreutils
         mtr
         nb
-        #ncdu
+        nixpkgsUnstable.legacyPackages.aarch64-darwin.ncdu
         neovim
-        #ngrok
+        ngrok
         ninja
         nixos-rebuild
         nmap
