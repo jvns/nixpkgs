@@ -2,10 +2,12 @@
   description = "julia's dev env";
   inputs = {
       # copy from https://github.com/NixOS/nixpkgs/commits/nixpkgs-23.11-darwin/
-      nixpkgs.url = "github:NixOS/nixpkgs/700804df18b73e2fe360d950f371aaec1691dea2";
-      #nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+      #nixpkgs.url = "github:NixOS/nixpkgs/700804df18b73e2fe360d950f371aaec1691dea2";
+      nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+
       # copy from https://github.com/NixOS/nixpkgs/commits/nixpkgs-unstable/
-      nixpkgsUnstable.url = "github:NixOS/nixpkgs/98b00b6947a9214381112bdb6f89c25498db4959";
+      #nixpkgsUnstable.url = "github:NixOS/nixpkgs/98b00b6947a9214381112bdb6f89c25498db4959";
+      nixpkgsUnstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
   outputs = { self, nixpkgs, nixpkgsUnstable }: 
     let pkgs = import nixpkgs {
