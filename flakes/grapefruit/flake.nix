@@ -72,7 +72,7 @@
         nb
         #ncdu
         neovim
-        ngrok
+        #ngrok
         ninja
         nixos-rebuild
         nmap
