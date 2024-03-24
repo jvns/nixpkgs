@@ -4,6 +4,5 @@ set -euo pipefail
 
 export NIXPKGS_ALLOW_UNFREE=1
 cd ~/work/nixpkgs/flakes/grapefruit || exit
-rm -f flake.lock
 nix build --out-link ~/.nix-flake 
 
