@@ -6,20 +6,24 @@
       #nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
       # copy from https://github.com/NixOS/nixpkgs/commits/nixpkgs-unstable/
       nixpkgsUnstable.url = "github:NixOS/nixpkgs/98b00b6947a9214381112bdb6f89c25498db4959";
-      hugoFlake.url = "path:../hugo-0.40";
-      paperjamFlake.url = "path:../paperjam";
-      picatFlake.url = "path:../picat";
   };
-  outputs = { self, nixpkgs, hugoFlake, paperjamFlake, picatFlake, nixpkgsUnstable }: 
+  outputs = { self, nixpkgs, nixpkgsUnstable }: 
     let pkgs = import nixpkgs {
       system = "aarch64-darwin";
       config.allowUnfree = true;
     };
+    myHugo = import ./hugo-0.40.nix { inherit pkgs; };
+    myPaperjam = import ./paperjam.nix { inherit pkgs; };
+    myPicat = import ./picat.nix { inherit pkgs; };
     in 
 {
     defaultPackage.aarch64-darwin = pkgs.buildEnv {
       name = "julia-dev";
       paths = with pkgs; [
+        myPaperjam
+        myPicat
+        myHugo
+
         alacritty
         atuin
         asdf-vm
@@ -54,7 +58,6 @@
         graphviz
         helix
         htop
-        hugoFlake.defaultPackage.aarch64-darwin
         imagemagick
         jq
         # install jj from unstable
@@ -86,8 +89,6 @@
         nushell
         osxfuse
         pandoc
-        paperjamFlake.defaultPackage.aarch64-darwin
-        picatFlake.defaultPackage.aarch64-darwin
         pdf2svg
         pdftk
         acme-client

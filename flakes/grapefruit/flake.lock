@@ -1,20 +1,5 @@
 {
   "nodes": {
-    "hugoFlake": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-0EGUdwu5+YP0KcEEJmoUo4A4oWKdoqR5+8LX/PcnapM=",
-        "path": "../hugo-0.40",
-        "type": "path"
-      },
-      "original": {
-        "path": "../hugo-0.40",
-        "type": "path"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1708529342,
@@ -47,91 +32,10 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1708529342,
-        "narHash": "sha256-gTzSstZWvAJgVz5U6coxVtAlY7dldPKgljjR9+cGr/I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1708529342,
-        "narHash": "sha256-gTzSstZWvAJgVz5U6coxVtAlY7dldPKgljjR9+cGr/I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1708529342,
-        "narHash": "sha256-gTzSstZWvAJgVz5U6coxVtAlY7dldPKgljjR9+cGr/I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "700804df18b73e2fe360d950f371aaec1691dea2",
-        "type": "github"
-      }
-    },
-    "paperjamFlake": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-MKAzofdiNWJ027jpoh/U2O7F6JI+XoEfSarKTsFgMUA=",
-        "path": "../paperjam",
-        "type": "path"
-      },
-      "original": {
-        "path": "../paperjam",
-        "type": "path"
-      }
-    },
-    "picatFlake": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-LJmNeK5DaCMclk2wYDJFUJ7nOdkC5K3SWP39Ge6ZVYE=",
-        "path": "../picat",
-        "type": "path"
-      },
-      "original": {
-        "path": "../picat",
-        "type": "path"
-      }
-    },
     "root": {
       "inputs": {
-        "hugoFlake": "hugoFlake",
-        "nixpkgs": "nixpkgs_2",
-        "nixpkgsUnstable": "nixpkgsUnstable",
-        "paperjamFlake": "paperjamFlake",
-        "picatFlake": "picatFlake"
+        "nixpkgs": "nixpkgs",
+        "nixpkgsUnstable": "nixpkgsUnstable"
       }
     }
   },
