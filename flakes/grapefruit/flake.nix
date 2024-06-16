@@ -22,6 +22,7 @@
     myPaperjam = import ./paperjam.nix { pkgs = pkgs; };
     myPicat = import ./picat.nix { pkgs = pkgs; };
     mydnsdist = import ./dnsdist.nix { pkgs = pkgs; };
+    mypdns = import ./pdns.nix { pkgs = pkgs; };
     in 
 {
     defaultPackage.aarch64-darwin = pkgs.buildEnv {
@@ -51,6 +52,7 @@
         delve
         deno
         mydnsdist
+        mypdns
         difftastic
         direnv
         # emscripten
