@@ -21,6 +21,7 @@
     myHugo = import ./hugo-0.40.nix { pkgs = pkgs; };
     myPaperjam = import ./paperjam.nix { pkgs = pkgs; };
     myPicat = import ./picat.nix { pkgs = pkgs; };
+    mydnsdist = import ./dnsdist.nix { pkgs = pkgs; };
     in 
 {
     defaultPackage.aarch64-darwin = pkgs.buildEnv {
@@ -38,7 +39,7 @@
         alacritty
         atuin
         asdf-vm
-        bind
+        #bind
         bitwise
         bottom
         broot
@@ -49,6 +50,7 @@
         delta
         delve
         deno
+        mydnsdist
         difftastic
         direnv
         # emscripten
@@ -76,7 +78,11 @@
         lazygit
         lftp
         librsvg
+        awscli2
+        pkg-config
+        libusb1
         libyaml
+        sshuttle
         #lima
         lsd
         glpk
