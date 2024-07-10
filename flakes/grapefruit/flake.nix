@@ -53,11 +53,14 @@
         deno
         mydnsdist
         mypdns
+        socat
+        doggo
         difftastic
         direnv
         # emscripten
         esbuild
         entr
+        zellij
         eza
         fd
         ffmpeg

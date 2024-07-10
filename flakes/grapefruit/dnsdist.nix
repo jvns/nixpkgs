@@ -16,10 +16,11 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [ pkg-config protobuf ];
-  buildInputs = [ boost libedit lua zlib  openssl ];
+  buildInputs = [ boost libedit lua zlib  openssl  fstrm ];
 
   configureFlags = [
     "--with-protobuf=yes"
+    "--with-dnstap=yes"
     "--disable-dependency-tracking"
     "--enable-unit-tests"
   ];
